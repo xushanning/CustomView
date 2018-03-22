@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--仿华为时钟-->
+    <declare-styleable name="HuaWeiClock">
+        <!--背景颜色-->
+        <attr name="backgroundColor" format="color" />
+        <!--竖线颜色-->
+        <attr name="secondLineColor" format="color" />
+        <!--秒针点的颜色-->
+        <attr name="secondPointColor" format="color" />
+        <!--时间的颜色-->
+        <attr name="timeColor" format="color" />
+    </declare-styleable>
+</resources>
