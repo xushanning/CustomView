@@ -2,9 +2,13 @@ package com.xu.customview.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.xu.customview.R;
 import com.xu.customview.view.HuaWeiClock;
@@ -37,7 +41,11 @@ public class CustomViewActivity extends Activity {
                 findViewById(R.id.huaWeiClock).setVisibility(View.VISIBLE);
                 break;
             case TYPE_HEADER:
-                findViewById(R.id.customHeader).setVisibility(View.VISIBLE);
+                //findViewById(R.id.customHeader).setVisibility(View.VISIBLE);
+                ImageView imageView = findViewById(R.id.imageView);
+                // imageView.setVisibility(View.VISIBLE);
+                AnimatedVectorDrawableCompat drawable = (AnimatedVectorDrawableCompat) imageView.getDrawable();
+                drawable.start();
                 break;
             default:
                 break;

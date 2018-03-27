@@ -66,6 +66,11 @@ public class CustomHeader extends View {
      * 中间小框
      */
     private RectF rectMiddle;
+
+    /**
+     * 中间小框宽度
+     */
+    private float middleWidth;
     /**
      * 里面小框
      */
@@ -170,10 +175,11 @@ public class CustomHeader extends View {
 
         viewWidth = widthSize;
         viewHeight = heightSize / 6f;
-        squareSize = widthSize * 4 / 25f;
+        squareSize = viewWidth * 4 / 25f;
         longLineLength = squareSize * 7 / 10f;
         //短线是长线的五分之二
         shortLineLength = longLineLength * 2 / 5;
+        middleWidth = squareSize * 21 / 78;
         setMeasuredDimension(width, height / 6);
     }
 
@@ -219,11 +225,11 @@ public class CustomHeader extends View {
      */
     private void drawInnerRect(Canvas canvas) {
         //里面的长方形框
-        rectMiddle.set(viewWidth / 2f - longLineLength / 2f, viewHeight / 2f + squareSize * 6 / 78f, viewWidth / 2f - longLineLength / 2f + squareSize / 3, viewHeight / 2f + squareSize * 26 / 78f);
+        rectMiddle.set(viewWidth / 2f - longLineLength / 2f, viewHeight / 2f + squareSize * 6 / 78f, viewWidth / 2f - longLineLength / 2f + middleWidth, viewHeight / 2f + squareSize * 26 / 78f);
         canvas.drawRect(rectMiddle, mPaint);
 
         //框里的长方形
-        rectInner.set(viewWidth / 2f - longLineLength / 2f + 3f, viewHeight / 2f + squareSize * 6 / 78f + 3f, viewWidth / 2f - longLineLength / 2f + squareSize / 3 - 3, viewHeight / 2f + squareSize * 26 / 78f - 3);
+        rectInner.set(viewWidth / 2f - longLineLength / 2f + 3f, viewHeight / 2f + squareSize * 6 / 78f + 3f, viewWidth / 2f - longLineLength / 2f + middleWidth - 3, viewHeight / 2f + squareSize * 26 / 78f - 3);
         canvas.drawRect(rectInner, innerRectFPaint);
     }
 
