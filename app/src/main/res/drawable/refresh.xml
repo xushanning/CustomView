@@ -3,57 +3,59 @@
     android:height="200dp"
     android:viewportHeight="200"
     android:viewportWidth="200">
+    <!--外面大框-->
     <path
-        android:name="path1"
-        android:fillColor="@color/colorAccent"
-        android:pathData="
-            M20,30
-            L100,30
-            M100,30
-            L100,90
-            M100,90
-            L20,90
-            M20,90
-            L20,30"
-        android:strokeColor="@color/colorAccent"
-        android:strokeLineCap="round"
-        android:strokeWidth="6" />
+        android:name="out_rect"
+        android:pathData="M70,60
+                          L130,60
+                          Q140,60 140,70
+                          L140,130
+                          Q140,140 130,140
+                          L70,140
+                          Q60,140 60,130
+                          L60,70
+                          Q60,60 70,60"
+        android:strokeColor="@color/colorCustomHeaderLine"
+        android:strokeWidth="2" />
+    <!--小长方形框-->
     <path
-        android:name="path2"
-        android:pathData="
-            M120,30
-            L180,30
-            M120,60
-            L180,60
-            M120,90
-            L180,90"
-        android:strokeColor="@color/colorAccent"
-        android:strokeLineCap="round"
-        android:strokeWidth="6" />
+        android:name="middle_rect"
+        android:pathData="M71,75
+                          L100,75
+                          L100,95
+                          L72,95
+                          L72,75"
+        android:strokeColor="@color/colorCustomHeaderLine"
+        android:strokeWidth="2" />
+    <!--里面的正方形-->
     <path
-        android:name="path3"
-        android:pathData="
-            M20,120
-            L180,120
-            M20,150
-            L180,150
-            M20,180
-            L180,180"
-        android:strokeColor="@color/colorAccent"
-        android:strokeLineCap="round"
-        android:strokeWidth="6" />
-
+        android:name="inner_rect"
+        android:fillColor="@color/colorCustomHeaderInner"
+        android:pathData="M73,76
+                          L99,76
+                          L99,94
+                          L73,94" />
+    <!--短线条-->
     <path
+        android:name="short_lines"
+        android:pathData="M108,75
+                          L128,75
+                          M108,85
+                          L128,85
+                          M108,95
+                          L128,95"
+        android:strokeColor="@color/colorCustomHeaderLine"
+        android:strokeWidth="2" />
+    <!--长线条-->
+    <path
+        android:name="long_lines"
         android:pathData="
-            M0,0
-            L200,0
-            M200,0
-            L200,200
-            M200,200
-            L0,200
-            M0,200
-            L0,0"
-        android:strokeColor="@color/colorAccent"
-        android:strokeLineCap="round"
-        android:strokeWidth="6" />
+                          M72,105
+                          L128,105
+                          M72,115
+                          L128,115
+                          M72,125
+                          L128,125"
+        android:strokeColor="@color/colorCustomHeaderLine"
+        android:strokeWidth="2" />
 </vector>

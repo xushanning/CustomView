@@ -2,16 +2,19 @@
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/refresh">
     <target
-        android:name="path1"
-        android:animation="@animator/jrtt_path_one" />
+        android:name="middle_rect"
+        android:animation="@animator/anim_middle_rect" />
 
     <target
-        android:name="path2"
-        android:animation="@animator/jrtt_path_two" />
+        android:name="short_lines"
+        android:animation="@animator/anim_short_lines" />
 
     <target
-        android:name="path3"
-        android:animation="@animator/jrtt_path_three" />
+        android:name="long_lines"
+        android:animation="@animator/anim_long_lines" />
 
+    <target
+        android:name="inner_rect"
+        android:animation="@animator/anim_inner_rect" />
 
 </animated-vector>

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.xu.customview"
-        minSdkVersion 21
+        minSdkVersion 23
         vectorDrawables.useSupportLibrary = true
         targetSdkVersion 26
         versionCode 1
