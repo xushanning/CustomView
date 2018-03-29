@@ -10,11 +10,15 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.orhanobut.logger.Logger;
 import com.xu.customview.R;
+import com.xu.customview.adapter.StickyAdapter;
+import com.xu.customview.adapter.StickyItemDecoration;
 
 /**
  * Created by xusn10 on 2018/3/21.
@@ -32,6 +36,10 @@ public class CustomViewActivity extends Activity {
      */
     public static final int TYPE_HEADER = 2;
 
+    /**
+     * 仿脉脉匿名区吸附效果
+     */
+    public static final int TYPE_STICKY = 3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,7 +52,6 @@ public class CustomViewActivity extends Activity {
                 findViewById(R.id.huaWeiClock).setVisibility(View.VISIBLE);
                 break;
             case TYPE_HEADER:
-
                 ImageView imageView = findViewById(R.id.imageView);
                 imageView.setVisibility(View.VISIBLE);
                 final AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) ContextCompat.getDrawable(this, R.drawable.refresh_vector);
@@ -62,6 +69,14 @@ public class CustomViewActivity extends Activity {
                         });
                     }
                 });
+                break;
+            case TYPE_STICKY:
+                RecyclerView recyclerView = findViewById(R.id.rv_sticky);
+                recyclerView.setVisibility(View.VISIBLE);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+                recyclerView.addItemDecoration(new StickyItemDecoration());
+                recyclerView.setLayoutManager(linearLayoutManager);
+                recyclerView.setAdapter(new StickyAdapter());
 
                 break;
             default:

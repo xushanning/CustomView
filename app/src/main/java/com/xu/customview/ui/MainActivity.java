@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //仿脉脉匿名区吸附效果
+        findViewById(R.id.bt_adsorbent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.putExtra("viewType", CustomViewActivity.TYPE_STICKY);
+                startActivity(intent);
+            }
+        });
     }
 }
