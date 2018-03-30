@@ -18,7 +18,11 @@ import android.widget.ImageView;
 import com.orhanobut.logger.Logger;
 import com.xu.customview.R;
 import com.xu.customview.adapter.StickyAdapter;
+import com.xu.customview.adapter.StickyGroupInfo;
 import com.xu.customview.adapter.StickyItemDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by xusn10 on 2018/3/21.
@@ -74,7 +78,21 @@ public class CustomViewActivity extends Activity {
                 RecyclerView recyclerView = findViewById(R.id.rv_sticky);
                 recyclerView.setVisibility(View.VISIBLE);
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-                recyclerView.addItemDecoration(new StickyItemDecoration());
+                List<StickyGroupInfo> groupInfos = new ArrayList<>();
+                for (int i = 0; i < 100; i++) {
+                    StickyGroupInfo groupInfo = new StickyGroupInfo();
+                    if (i % 5 == 0) {
+                        groupInfo.setShowTitle(true);
+                        groupInfo.setTitle("标题" + i);
+                    } else {
+                        groupInfo.setShowTitle(false);
+                        groupInfo.setTitle("标题" + i);
+                    }
+                    groupInfos.add(groupInfo);
+
+                }
+                StickyItemDecoration stickyItemDecoration = new StickyItemDecoration(groupInfos);
+                recyclerView.addItemDecoration(stickyItemDecoration);
                 recyclerView.setLayoutManager(linearLayoutManager);
                 recyclerView.setAdapter(new StickyAdapter());
 

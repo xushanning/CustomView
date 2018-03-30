@@ -6,68 +6,68 @@
         android:duration="500"
         android:interpolator="@android:interpolator/decelerate_cubic"
         android:propertyName="pathData"
-        android:valueFrom="M72,105
-                          L128,105
-                          M72,115
-                          L128,115
-                          M72,125
-                          L128,125"
-        android:valueTo="M72,75
-                         L92,75
-                         M72,85
-                         L92,85
-                         M72,95
-                         L92,95"
+        android:valueFrom="M20,55
+                          L80,55
+                          M20,65
+                          L80,65
+                          M20,75
+                          L80,75"
+        android:valueTo="M20,25
+                         L40,25
+                         M20,35
+                         L40,35
+                         M20,45
+                         L40,45"
         android:valueType="pathType" />
     <objectAnimator
         android:duration="500"
         android:interpolator="@android:interpolator/decelerate_cubic"
         android:propertyName="pathData"
-        android:valueFrom="M72,75
-                         L92,75
-                         M72,85
-                         L92,85
-                         M72,95
-                         L92,95"
-        android:valueTo="M72,75
-                        L128,75
-                        M72,85
-                        L128,85
-                        M72,95
-                        L128,95"
+        android:valueFrom="M20,25
+                         L40,25
+                         M20,35
+                         L40,35
+                         M20,45
+                         L40,45"
+        android:valueTo="M20,25
+                         L80,25
+                         M20,35
+                         L80,35
+                         M20,45
+                         L80,45"
         android:valueType="pathType" />
     <objectAnimator
         android:duration="500"
         android:interpolator="@android:interpolator/decelerate_cubic"
         android:propertyName="pathData"
-        android:valueFrom="M72,75
-                        L128,75
-                        M72,85
-                        L128,85
-                        M72,95
-                        L128,95"
-        android:valueTo="M108,105
-                          L128,105
-                          M108,115
-                          L128,115
-                          M108,125
-                          L128,125"
+        android:valueFrom="M20,25
+                         L80,25
+                         M20,35
+                         L80,35
+                         M20,45
+                         L80,45"
+        android:valueTo="M50,55
+                          L80,55
+                          M50,65
+                          L80,65
+                          M50,75
+                          L80,75"
         android:valueType="pathType" />
     <objectAnimator
         android:duration="500"
         android:interpolator="@android:interpolator/decelerate_cubic"
         android:propertyName="pathData"
-        android:valueFrom="M108,105
-                          L128,105
-                          M108,115
-                          L128,115
-                          M108,125
-                          L128,125"
-        android:valueTo="M72,105
-                          L128,105
-                          M72,115
-                          L128,115
-                          M72,125
-                          L128,125"
+        android:valueFrom="M50,55
+                          L80,55
+                          M50,65
+                          L80,65
+                          M50,75
+                          L80,75"
+        android:valueTo="M20,55
+                          L80,55
+                          M20,65
+                          L80,65
+                          M20,75
+                          L80,75"
         android:valueType="pathType" />
 </set>

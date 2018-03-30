@@ -1,61 +1,60 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="200dp"
-    android:height="200dp"
-    android:viewportHeight="200"
-    android:viewportWidth="200">
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
     <!--外面大框-->
     <path
         android:name="out_rect"
-        android:pathData="M70,60
-                          L130,60
-                          Q140,60 140,70
-                          L140,130
-                          Q140,140 130,140
-                          L70,140
-                          Q60,140 60,130
-                          L60,70
-                          Q60,60 70,60"
+        android:pathData="M20,10
+                          L80,10
+                          Q90,10 90,20
+                          L90,80
+                          Q90,90 80,90
+                          L20,90
+                          Q10,90 10,80
+                          L10,20
+                          Q10,10 20,10"
         android:strokeColor="@color/colorCustomHeaderLine"
         android:strokeWidth="2" />
     <!--小长方形框-->
     <path
         android:name="middle_rect"
-        android:pathData="M71,75
-                          L100,75
-                          L100,95
-                          L72,95
-                          L72,75"
+        android:pathData="M19,25
+                          L50,25
+                          L50,45
+                          L20,45
+                          L20,25"
         android:strokeColor="@color/colorCustomHeaderLine"
         android:strokeWidth="2" />
     <!--里面的正方形-->
     <path
         android:name="inner_rect"
         android:fillColor="@color/colorCustomHeaderInner"
-        android:pathData="M73,76
-                          L99,76
-                          L99,94
-                          L73,94" />
+        android:pathData="M21,26
+                          L49,26
+                          L49,44
+                          L21,44" />
     <!--短线条-->
     <path
         android:name="short_lines"
-        android:pathData="M108,75
-                          L128,75
-                          M108,85
-                          L128,85
-                          M108,95
-                          L128,95"
+        android:pathData="M60,25
+                          L80,25
+                          M60,35
+                          L80,35
+                          M60,45
+                          L80,45"
         android:strokeColor="@color/colorCustomHeaderLine"
         android:strokeWidth="2" />
     <!--长线条-->
     <path
         android:name="long_lines"
-        android:pathData="
-                          M72,105
-                          L128,105
-                          M72,115
-                          L128,115
-                          M72,125
-                          L128,125"
+        android:pathData="  M20,55
+                            L80,55
+                            M20,65
+                            L80,65
+                            M20,75
+                            L80,75"
         android:strokeColor="@color/colorCustomHeaderLine"
         android:strokeWidth="2" />
 </vector>
